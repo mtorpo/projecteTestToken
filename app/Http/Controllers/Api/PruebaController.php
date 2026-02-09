@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Dotenv\Repository\RepositoryInterface;
 use Illuminate\Http\Request;
 
 class PruebaController extends Controller
@@ -12,7 +13,7 @@ class PruebaController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(['mensaje' => 'accediendo a index']);
     }
 
     /**
@@ -28,7 +29,7 @@ class PruebaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return response()->json(['mensaje' => 'mostrando elemento']);
     }
 
     /**
@@ -36,7 +37,7 @@ class PruebaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return response()->json(['mensaje' => 'aztualizando elemento']);
     }
 
     /**
@@ -44,6 +45,6 @@ class PruebaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return response()->json(['eliminando producto']);
     }
 }
